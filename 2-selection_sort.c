@@ -5,9 +5,10 @@
  * @array: This is the array this is the array to sort.
  * @size: This is the size of the array.
 */
+
 void selection_sort(int *array, size_t size)
 {
-		size_t sel, i, j, aux;
+	size_t sel, i, j, aux;
 
 	if (array == NULL)
 		return;
