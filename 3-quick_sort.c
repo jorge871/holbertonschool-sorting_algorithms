@@ -63,7 +63,7 @@ void quick_sort_recursive(int *array, int low, int high, size_t size_array)
 {
 	int in;
 
-	if (low >= high || low < 0)
+	if (high <= low || low < 0)
 		return;
 
 	in = pivot(array, low, high, size_array);
@@ -82,6 +82,5 @@ void quick_sort(int *array, size_t size)
 {
 	if (array == NULL)
 		return;
-
 	quick_sort_recursive(array, 0, size - 1, size);
 }
