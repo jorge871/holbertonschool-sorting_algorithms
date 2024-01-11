@@ -22,7 +22,7 @@ void swap(int *array, int i, int j, size_t size)
 }
 
 /**
- * Lomuto - Function that sorts and return the sorted index.
+ * pivot - Function that sorts and return the sorted index.
  * @array: Array.
  * @low: Low section of the array to be sorted.
  * @high: High section of the array to be sorted.
@@ -30,15 +30,15 @@ void swap(int *array, int i, int j, size_t size)
  * Return: The index where the array is sorted.
 */
 
-int Lomuto(int *array, int low, int high, size_t size_array)
+int pivot(int *array, int low, int high, size_t size_array)
 {
-	int index = array[high];
+	int pivot = array[high];
 
 	int i = low - 1, j;
 
 	for (j = low; j < high; j++)
 	{
-		if (array[j] <= index)
+		if (array[j] <= pivot)
 		{
 			i++;
 			swap(array, i, j, size_array);
@@ -66,7 +66,7 @@ void quick_sort_recursive(int *array, int low, int high, size_t size_array)
 	if (low >= high || low < 0)
 		return;
 
-	in = Lomuto(array, low, high, size_array);
+	in = pivot(array, low, high, size_array);
 	quick_sort_recursive(array, low, in - 1, size_array);
 	quick_sort_recursive(array, in + 1, high, size_array);
 }
