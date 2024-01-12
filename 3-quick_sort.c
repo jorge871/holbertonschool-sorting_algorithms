@@ -13,7 +13,6 @@ void swap(int *array, int i, int j, size_t size)
 	if (i != j)
 	{
 		int temp = array[i];
-
 		array[i] = array[j];
 		array[j] = temp;
 		print_array(array, size);
@@ -30,6 +29,7 @@ void swap(int *array, int i, int j, size_t size)
 */
 
 int pivot(int *array, int low, int high, size_t size_array)
+
 {
 	int pivot = array[high];
 
