@@ -2,8 +2,8 @@
 /**
  * insertion_sort_list - Function that sorts a doubly
  * linked list of integers in ascending order.
- * @array: This is the array this is the array to sort.
- * @size: This is the size of the array.
+ * @list: This is the pointer to a pointer
+ * to the head of the list.
 */
 void insertion_sort_list(listint_t **list)
 {
